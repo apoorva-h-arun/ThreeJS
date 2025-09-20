@@ -3,7 +3,7 @@ import {OrbitControls, ThreeMFLoader} from 'three/examples/jsm/Addons.js';
 
 const grassImg = document.createElement('img');
 grassImg.src = 'https://9bisfjtoi2cc6ko3.public.blob.vercel-storage.com/GolfGrass.jpg';
-document.body.appendChild(grassImg);
+//document.body.appendChild(grassImg);
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight)
