@@ -1,6 +1,10 @@
 import * as THREE from 'three';
 import {OrbitControls, ThreeMFLoader} from 'three/examples/jsm/Addons.js';
 
+const grassImg = document.createElement('img');
+grassImg.src = 'https://9bisfjtoi2cc6ko3.public.blob.vercel-storage.com/GolfGrass.jpg';
+document.body.appendChild(grassImg);
+
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
@@ -22,7 +26,7 @@ scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1.5);
 scene.add(directionalLight);
 
-const grassTexture = new THREE.TextureLoader().load('./assets/GolfGrass.jpg');
+const grassTexture = new THREE.TextureLoader().load(grassImg);
 const woodTexture = new THREE.TextureLoader().load('./assets/Wood.avif');
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 scene.background = cubeTextureLoader.load([
